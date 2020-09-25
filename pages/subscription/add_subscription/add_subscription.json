@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "van-cell": "vant-weapp/cell",
+    "van-field": "vant-weapp/field",
+    "van-popup": "vant-weapp/popup",
+    "van-button": "vant-weapp/button",
+    "van-area": "vant-weapp/area"
+
+  },
+  "navigationBarBackgroundColor": "#138bec",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "添加订阅"
+}

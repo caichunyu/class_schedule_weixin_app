@@ -1,0 +1,8 @@
+/* pages/personal/customerService/customerService.wxss */
+.userinfo-avatar {
+  margin-bottom: 10rpx;
+  width: 63rpx;
+  height: 63rpx;
+  margin-top:-5rpx;
+  border-radius: 50%;
+}

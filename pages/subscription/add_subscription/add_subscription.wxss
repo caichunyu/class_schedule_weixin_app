@@ -1,0 +1,13 @@
+/* pages/subscription/add_subscription/add_subscription.wxss */
+.add-sub-main-box {
+  justify-content: space-evenly;
+  height: 540rpx;
+  align-items: center;
+}
+
+.sub-bottom-box {
+  color: #919598;
+  font-size: 14px;
+  padding: 8rpx;
+  margin-left: -120rpx;
+}

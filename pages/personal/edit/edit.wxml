@@ -1,0 +1,61 @@
+<van-cell-group>
+
+  <van-popup show="{{genderPopup}}" overlay-style="opacity:0.1" position="bottom" bind:close="onClose">
+    <van-button size="large" square="true" disabled>请选择性别</van-button>
+    <van-button size="large" square="true" bindtap="Gender0">男生</van-button>
+    <van-button size="large" square="true" bindtap="Gender1">女生</van-button>
+    <van-button size="large" square="true" bindtap="onClose">取消</van-button>
+  </van-popup>
+
+  <van-cell border>
+    <view slot="title" class="row" style="justify-content: space-between">
+      <span class="van-cell-text">头像</span>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+    </view>
+  </van-cell>
+  <van-cell  border value="{{nickName}}">
+    <view slot="title">
+      <span class="van-cell-text">昵称</span>
+    </view>
+  </van-cell>
+  <van-cell border value="1234521 ">
+    <view slot="title">
+      <span class="van-cell-text">ID号</span>
+    </view>
+  </van-cell>
+</van-cell-group>
+
+<view style="height: 0.3rem; background-color: #eaeaea;"></view>
+
+<van-cell-group>
+  <van-cell is-link border bindtap="genderPopup" value="{{gender}}">
+    <view slot="title">
+      <span class="van-cell-text">性别</span>
+    </view>
+  </van-cell>
+
+  <van-cell is-link border bindtap="agePopup" value="{{userAge}}">
+    <view slot="title">
+      <span class="van-cell-text">年龄</span>
+    </view>
+  </van-cell>
+  <van-popup show="{{agePopup}}" custom-style="background-color:#999999" overlay-style="opacity:0.1"
+             position="bottom" bind:close="onClose" >
+    <van-datetime-picker
+        type="date"
+        value="{{currentDate}}"
+        min-date="{{minDate}}"
+        bind:confirm="ageOnselect"
+        bind:cancel="onClose"/>
+  </van-popup>
+
+  <van-cell is-link border bindtap="areaPopup" value="{{location}}">
+    <view slot="title">
+      <span class="van-cell-text">地区</span>
+    </view>
+  </van-cell>
+  <van-popup show="{{areaPopup}}" custom-style="background-color:#999999" overlay-style="opacity:0.1"
+             position="bottom" bind:close="onClose">
+    <van-area title="选择地址" columns-num="{{2}}" value="110100" area-list="{{areaList}}"  bind:confirm="chooseCity"/>
+  </van-popup>
+</van-cell-group>

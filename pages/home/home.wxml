@@ -1,0 +1,50 @@
+<!-- pages/home/home.wxml -->
+<!-- pages/home/home.wxml -->
+<view class="container" style="background-color: #f5f6f7;">
+  <view class="ads">
+    <swiper indicator-dots autoplay circular interval="3000" duration="500" style="height: 400rpx;">
+      <block wx:for="{{adsImgUrls}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item.src}}" mode="aspectFill" class="slide-image" style="height: 400rpx; width: 100%;"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- <image src="" mode="aspectFit" /> -->
+  </view>
+  <view class="function-menu">
+    <!--<view bindtap="toCoursePage" class="menu-item">-->
+      <!--<image src="../../assets/icon/menu_all.png" class="menu-item-img"/>-->
+      <!--<text class="menu-item-text">学生课表</text>-->
+    <!--</view>-->
+    <navigator open-type="switchTab" wx:for="{{buttonList}}" wx:key="index" class="menu-item"
+               url="{{item.link}}">
+      <image src="{{item.icon}}" class="menu-item-img"/>
+      <text class="menu-item-text">{{item.label}}</text>
+    </navigator>
+  </view>
+
+  <view class="tender-info">
+    <view class="tender-info-header">
+      <view style="width: 10rpx; height: 24rpx; background-color: #008de3;"></view>
+      <text style="margin-left: 10rpx;">最新通知</text>
+      <text style="margin-left: auto;">更多</text>
+      <van-icon name="arrow"/>
+    </view>
+    <view wx:for="{{tenderInfos}}" wx:key="index" class="tender-info-item">
+      <text>{{item.text}}</text>
+      <view class="tender-info-item-tag">
+        <block wx:for="{{item.tags}}" wx:for-item="titem" wx:for-index="tindex" wx:key="tindex">
+          <van-tag color="{{titem.color}}" class="tender-info-item-tag-c">{{titem.text}}</van-tag>
+        </block>
+        <view>
+          <icon type="waiting" size="10" color="#919191"/>
+          <text>{{item.date}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style="position: relative;text-align: center;width: 100%;">
+    <text class="under-line" space="emsp">我是有底线的</text>
+  </view>
+
+</view>

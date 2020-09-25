@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-switch": "vant-weapp/switch"
+  },
+  "navigationBarBackgroundColor": "#138bec",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "招标订阅"
+}

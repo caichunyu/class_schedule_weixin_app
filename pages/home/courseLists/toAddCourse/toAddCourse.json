@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "van-button": "vant-weapp/button/index",
+    "van-cell": "vant-weapp/cell/index",
+    "van-popup": "vant-weapp/popup/index",
+    "van-field": "vant-weapp/field/index",
+    "van-datetime-picker": "vant-weapp/datetime-picker",
+    "van-area": "vant-weapp/area"
+  },
+  "navigationBarBackgroundColor": "#0a56c6",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "添加课程",
+  "backgroundColor": "#f5f6f7"
+}

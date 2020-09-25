@@ -1,0 +1,54 @@
+<view style="width: 755rpx ; height:100vh;background-color:#f6f6f6;">
+
+  <van-cell-group class="column">
+    <van-field
+        title-width="190px"
+        required
+        disabled
+        label="请提出您宝贵的意见"
+        use-button-slot>
+      <van-button slot="button" size="small" round square="true" bindtap="">提交</van-button>
+    </van-field>
+  </van-cell-group>
+
+  <van-cell-group>
+    <van-field
+        input-class="field-class"
+        value="{{feedbackEnd}}"
+        clearable
+        autosize
+        type="textarea"
+        placeholder="欢迎反馈我们将为您不断改进"
+        maxlength="500"
+        bind:change="feedbackEnd"
+    />
+  </van-cell-group>
+
+  <!--<view class="add-photo">-->
+    <!--<text class="font-style">可在此添加图片</text>-->
+    <!--<text class="font-style" style="  font-size:12px;"> 图片只可以添加两张，每张不可以超过200kb</text>-->
+
+    <!--<view style="display: flex;flex-direction: row;justify-content: flex-start">-->
+      <!--<button bindtap="addPhoto" style="width: 150rpx; height: 150rpx; border: #f8f8f8 3px;padding: 0; margin: 2px">-->
+        <!--<image style="width: 150rpx; height: 150rpx" src="../../../assets/icon/addphoto.png"></image>-->
+      <!--</button>-->
+      <!--<button bindtap="addPhoto" style="width: 150rpx; height: 150rpx; border: #f8f8f8 3px;padding: 0; margin: 2px">-->
+        <!--<image style="width: 150rpx; height: 150rpx" src="../../../assets/icon/addphoto.png"></image>-->
+      <!--</button>-->
+    <!--</view>-->
+  <!--</view>-->
+
+  <view style="margin-top: 20rpx">
+    <van-field
+        title-width="100px"
+        label="您的联系方式："
+        value="{{feedbackEnd}}"
+        clearable
+        type="number"
+        placeholder="手机号"
+        maxlength="11"
+    />
+  </view>
+  <view class="font-style" style="color: #919598; padding: 10rpx 15rpx">我们会及时处理您的反馈，并第一时间给您回复。</view>
+  <view class="font-style" style="color: #919598;padding: 0rpx 15rpx">您还可以发送邮件至  caichunyu0@qq.com</view>
+</view>

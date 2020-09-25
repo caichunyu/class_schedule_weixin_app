@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-popup": "vant-weapp/popup/index",
+    "van-button": "vant-weapp/button/index",
+    "van-cell": "vant-weapp/cell",
+    "van-picker": "vant-weapp/picker/index"
+  },
+  "navigationBarBackgroundColor": "#0a56c6",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "课程表",
+  "backgroundColor": "#f5f6f7"
+}

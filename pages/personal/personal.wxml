@@ -1,0 +1,62 @@
+<!--pages/personal/personal.wxml-->
+<view class="personal-main">
+
+  <view class="first-userinfo">
+
+    <view class="row">
+      <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">微信登陆</button>
+        <block wx:else>
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        </block>
+      </view>
+
+      <view class="column userinfo-nickname">
+        <view class=""> 用户名：{{userInfo.nickName}}</view>
+        <!--<view style="display: flex;flex-direction: row">-->
+        <!--<image class="userinfo-avatar" style="width: 1rem; height: 1rem" src="../../assets/icon/vip_icon41.jpg"-->
+        <!--mode="cover"></image>-->
+        <!--<text>{{userType}}</text>-->
+        <!--</view>-->
+      </view>
+    </view>
+
+    <!--<view class="userinfo">-->
+    <!--<text bindtap="toEditPage">编辑</text>-->
+    <!--<van-button size="mini" round type="danger">圆形按钮</van-button>-->
+    <!--</view>-->
+  </view>
+
+  <view style="height: 0.4rem; background-color: #eaeaea;"></view>
+
+  <van-cell value="编辑" is-link border bindtap="toEditPage">
+    <view slot="title">
+      <image src="../../assets/icon/customer_service.svg" style="width: 1.3rem; height: .7rem; " mode="cover"></image>
+      <span class="van-cell-text">个人信息</span>
+    </view>
+  </van-cell>
+
+  <view style="height: 0.3rem; background-color: #eaeaea;"></view>
+
+  <van-cell-group style="height: auto">
+    <van-cell value="" is-link border url="inviteFriends/inviteFriends">
+      <view slot="title">
+        <image src="../../assets/icon/customer_service.svg" style="width: 1.3rem; height: .7rem; " mode="cover"></image>
+        <span class="van-cell-text">邀请好友</span>
+      </view>
+    </van-cell>
+    <van-cell is-link border url="./feedback/feedback" border>
+      <view slot="title">
+        <image src="../../assets/icon/customer_service.svg" style="width: 1.3rem; height: .7rem; " mode="cover"></image>
+        <span class="van-cell-text">意见反馈</span>
+      </view>
+    </van-cell>
+    <van-cell is-link border url="./customerService/customerService" border>
+      <view slot="title">
+        <image src="../../assets/icon/customer_service.svg" style="width: 1.3rem; height: .7rem; " mode="cover"></image>
+        <span class="van-cell-text">我的客服</span>
+      </view>
+    </van-cell>
+  </van-cell-group>
+
+</view>

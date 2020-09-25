@@ -1,0 +1,12 @@
+{
+    "usingComponents": {
+        "van-button": "vant-weapp/button/index",
+        "van-search": "vant-weapp/search/index",
+        "van-tag": "vant-weapp/tag/index",
+        "van-icon": "vant-weapp/icon/index"
+    },
+    "navigationBarBackgroundColor": "#0a56c6",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "学生综合服务系统",
+    "backgroundColor": "#f5f6f7"
+}

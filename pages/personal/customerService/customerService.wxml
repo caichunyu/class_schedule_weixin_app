@@ -1,0 +1,19 @@
+<view style="height: 100vh; background-color:#f6f6f6; padding-top:24rpx ">
+  <van-cell-group>
+    <van-cell value="15511100000" border>
+      <view slot="title">
+        <span class="van-cell-text">客服热线1</span>
+      </view>
+    </van-cell>
+    <van-cell border value="1305429696">
+      <view slot="title">
+        <span class="van-cell-text">客服QQ1</span>
+      </view>
+    </van-cell>
+    <van-cell border value="1305429696">
+      <view slot="title">
+        <span class="van-cell-text">客服QQ2</span>
+      </view>
+    </van-cell>
+  </van-cell-group>
+</view>

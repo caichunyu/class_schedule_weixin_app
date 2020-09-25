@@ -1,0 +1,21 @@
+/* pages/personal/inviteFriends/inviteFriends.wxss */
+.invite-main-box {
+  position: relative;
+}
+
+.invite-background {
+  position: absolute;
+  width: 750rpx;
+  height: 100vh;
+  top: 0;
+  right: 0;
+}
+
+.invite-top-box {
+  height: 560rpx;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.invite-bottom-box {
+align-items: center}

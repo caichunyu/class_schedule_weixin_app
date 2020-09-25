@@ -1,0 +1,19 @@
+/* pages/personal/feedback.wxss */
+
+.field-class {
+  height: 300rpx !important;
+
+
+}
+
+.font-style {
+  font-size: 14px;
+  color: #333;
+  line-height: 24px;
+}
+
+.add-photo {
+  margin-top: 20rpx;
+  background-color: #ffffff;
+  padding: 15rpx 26rpx;
+}

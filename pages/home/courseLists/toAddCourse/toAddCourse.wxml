@@ -1,0 +1,79 @@
+<view style="width: 755rpx ; height:100vh;background-color:#f6f6f6;">
+
+  <van-cell-group class="column">
+    <van-field
+        title-width="190px"
+        required
+        disabled
+        label="请输入以下课程信息"
+        use-button-slot>
+      <van-button slot="button" size="small" round square="true" bindtap="upData">提交</van-button>
+    </van-field>
+  </van-cell-group>
+
+  <view style="margin-top: 20rpx">
+    <van-field
+        title-width="100px"
+        label="课程名称："
+        clearable
+        type="textarea"
+        placeholder="请输入课程名称"
+        maxlength="50"
+        bind:change="addCourseName"
+    />
+  </view>
+
+  <view style="margin-top: 20rpx">
+    <van-field
+        title-width="100px"
+        label="老师姓名："
+        clearable
+        type="textarea"
+        placeholder="请输入老师姓名"
+        maxlength="20"
+        bind:change="addTeacherName"
+    />
+  </view>
+
+  <view style="margin-top: 20rpx">
+    <van-field
+        title-width="100px"
+        label="上课地点："
+        clearable
+        type="textarea"
+        placeholder="请输入上课地点"
+        maxlength="50"
+        bind:change="addCoursePlace"
+    />
+  </view>
+
+  <van-cell is-link border>
+    <picker class="row" style="width: auto" bindchange="courseTimePicker" value="{{courseTimeIndex}}"
+            range="{{courseTimeLists}}">
+      <!--<view class="picker">-->
+      上课时间：{{courseTimeLists[courseTimeIndex]}}
+      <!--</view>-->
+    </picker>
+  </van-cell>
+
+  <van-cell is-link border>
+    <picker class="row" style="width: auto" bindchange="weekTimePicker" value="{{weekTimeIndex}}"
+            range="{{weekTimeLists}}">
+      <!--<view class="picker">-->
+      周几上课：{{weekTimeLists[weekTimeIndex]}}
+      <!--</view>-->
+    </picker>
+  </van-cell>
+
+  <view style="margin-top: 20rpx">
+    <van-field
+        title-width="100px"
+        label="备注："
+        placeholder="输入上课周数等"
+        maxlength="15"
+        bind:change="addWeek"
+    />
+  </view>
+
+  <!--<van-button slot="button" size="small" round square="true" bindtap="test">test</van-button>-->
+</view>

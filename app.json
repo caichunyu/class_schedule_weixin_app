@@ -1,0 +1,71 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/home/home",
+        "pages/personal/personal",
+        "pages/home/courseLists/courseLists",
+        "pages/home/courseLists/toAddCourse/toAddCourse",
+        "pages/subscription/subscription",
+        "pages/personal/customerService/customerService",
+        "pages/personal/feedback/feedback",
+        "pages/personal/edit/edit",
+        "pages/personal/inviteFriends/inviteFriends"
+    ],
+    "window": {
+        "backgroundColor": "#fff",
+        "backgroundColorBottom": "#fff",
+        "backgroundColorTop": "#fff",
+        "backgroundTextStyle": "light",
+        "navigationStyle": "default",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "white",
+        "enablePullDownRefresh": false,
+        "onReachBottomDistance": 50,
+        "pageOrientation": "portrait"
+    },
+    "tabBar": {
+        "color": "#7A7E83",
+        "selectedColor": "#098be3",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "iconPath": "assets/icon/home_.png",
+                "selectedIconPath": "assets/icon/home.png"
+            },
+            {
+                "pagePath": "pages/home/courseLists/courseLists",
+                "text": "课表",
+                "iconPath": "assets/icon/subscription_.png",
+                "selectedIconPath": "assets/icon/subscription.png"
+            },
+            {
+                "pagePath": "pages/personal/personal",
+                "text": "我的",
+                "iconPath": "assets/icon/personal_.png",
+                "selectedIconPath": "assets/icon/personal.png"
+            }
+        ],
+        "position": "bottom"
+    },
+    "networkTimeout": {
+        "request": 10000,
+        "connectSocket": 10000,
+        "uploadFile": 10000,
+        "downloadFile": 10000
+    },
+    "dubug": false,
+    "functionalPages": false,
+    "subPackages": [],
+    "requiredBackgroundModes": [
+        "audio"
+    ],
+    "plugins": {},
+    "preloadRule": {},
+    "resizable": false,
+    "navigateToMiniProgramAppIdList": [],
+    "sitemapLocation": "sitemap.json"
+}

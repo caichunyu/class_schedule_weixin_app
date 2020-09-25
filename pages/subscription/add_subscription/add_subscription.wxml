@@ -1,0 +1,53 @@
+<!--pages/subscription/add_subscription/add_subscription.wxml-->
+<view style="width: 755rpx ; height:100vh;background-color:#f6f6f6;">
+
+  <!--<view style="height: 20rpx; background-color: #f6f6f6"></view>-->
+
+  <view class="column add-sub-main-box">
+
+    <!--<view style="height: 20rpx; background-color: #f6f6f6"></view>-->
+
+    <van-cell is-link bindtap="subAreaPopup" style="width: 710rpx;">
+      <view slot="title">
+        <span class="van-cell-text" style="color: #919598;">选择区域：</span>
+        <text>{{selectedCity}}</text>
+      </view>
+    </van-cell>
+    <van-popup show="{{subAreaPopup}}" custom-style="background-color:#999999" overlay-style="opacity:0.1"
+               position="bottom" bind:close="onClose">
+      <van-area title="选择地址" bind:confirm="selectedCity" columns-num="{{2}}" value="110100" area-list="{{areaList}}"/>
+    </van-popup>
+
+    <van-cell is-link style="margin-top: -20rpx; width: 710rpx" bindtap="subTypePopup">
+      <view slot="title">
+        <span class="van-cell-text" style="color: #919598;">招标类型：</span>
+        <text>{{subTypeResult}}</text>
+      </view>
+    </van-cell>
+    <van-popup show="{{subTypePopup}}" position="bottom" bind:close="onClose">
+      <!--custom-style="background-color:#f8f8f8" 放上面可以更改禁用的button颜色-->
+      <van-button size="large" square="true" disabled>请选择招标类型</van-button>
+      <van-button size="large" square="true" bindtap="subTypeResult">不限</van-button>
+      <van-button size="large" square="true" bindtap="subTypeResult">招标</van-button>
+      <van-button size="large" square="true" bindtap="subTypeResult">中标</van-button>
+      <van-button size="large" square="true" bindtap="subTypeResult">流标</van-button>
+    </van-popup>
+
+    <view style="margin-top: -20rpx; width: 710rpx">
+      <van-field
+          title-width="100px"
+          label="关键字："
+          value="{{feedbackEnd}}"
+          clearable
+          placeholder="请输入15个字以内">
+        <view slot="label">关键字</view>
+      </van-field>
+    </view>
+
+    <view class="sub-bottom-box">多个关键词请以空白分隔，例如：器材 信息</view>
+
+    <button bindtap="toAddSubscription" style="width: 650rpx; background-color: #138bec; color: white;">订阅</button>
+
+  </view>
+</view>
+

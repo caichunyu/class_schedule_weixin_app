@@ -1,0 +1,80 @@
+<view>
+  <view class="text-main">
+
+    <view class="row top-classList">
+      <picker style="width: auto" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        当前是：{{array[18]}}
+      </picker>
+
+      <van-button round size="small" plain bindtap="toAddCourse" type="info">添加课程</van-button>
+      <van-button style="margin-right: -112rpx" round size="small" plain bindtap="selectThePopup" type="info">选择课表
+      </van-button>
+      <van-popup show="{{selectPopup}}" custom-style="background-color:#999999" overlay-style="opacity:0.1"
+                 position="bottom" bind:close="onClose">
+        <van-picker show-toolbar="true" columns="{{ columns }}" bind:confirm="onConfirm" bind:cancel="oncancel"/>
+      </van-popup>
+    </view>
+
+    <view class="week-courses">
+      <view class="flex-wrp" wx:for="{{coursesLists}}" wx:key="index">
+        <view wx:for="{{item}}" wx:key="index">
+
+          <view wx:if="{{item.session === '1'}}">
+            <view class="small-course" style="background-color: #fae0f0; height: 23vh;">
+              <view class="aList van-ellipsis">{{item.courseName}}</view>
+              <view class="aList">{{item.teacherName}}</view>
+              <view class="aList">{{item.atWeeks}}</view>
+              <view class="aList">{{item.schoolyard}}</view>
+              <!--<view class="aList">{{item.schoolroomNo}}</view>-->
+            </view>
+          </view>
+
+          <view wx:if="{{item.session === '4'}}">
+            <view class="small-course" style="background-color: #e8dbff;">
+              <view class="aList van-ellipsis">{{item.courseName}}</view>
+              <view class="aList">{{item.teacherName}}</view>
+              <view class="aList">{{item.atWeeks}}</view>
+              <view class="aList">{{item.schoolyard}}</view>
+              <view class="aList">{{item.schoolroomNo}}</view>
+            </view>
+          </view>
+
+          <view wx:if="{{item.session === '6'}}">
+            <view class="small-course" style="background-color: #cddbe6 ;">
+              <view class="aList van-ellipsis ">{{item.courseName}}</view>
+              <view class="aList">{{item.teacherName}}</view>
+              <view class="aList">{{item.atWeeks}}</view>
+              <view class="aList">{{item.schoolyard}}</view>
+              <view class="aList">{{item.schoolroomNo}}</view>
+            </view>
+          </view>
+
+          <view wx:if="{{item.session === '8'}}">
+            <view class="small-course" style="background-color: lightblue;">
+              <view class="aList van-ellipsis ">{{item.courseName}}</view>
+              <view class="aList">{{item.teacherName}}</view>
+              <view class="aList">{{item.atWeeks}}</view>
+              <view class="aList">{{item.schoolyard}}</view>
+              <view class="aList">{{item.schoolroomNo}}</view>
+            </view>
+          </view>
+
+          <view wx:if="{{item.session === '10'}}">
+            <view class="small-course" style="background-color: #e2e6cb;">
+              <view class="aList van-ellipsis">{{item.courseName}}</view>
+              <view class="aList">{{item.teacherName}}</view>
+              <view class="aList">{{item.atWeeks}}</view>
+              <view class="aList">{{item.schoolyard}}</view>
+              <view class="aList">{{item.schoolroomNo}}</view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+
+    </view>
+  </view>
+  <!--<navigator url="../../pages/index/index" hover-class="navigator-hover" style="color:indianred; margin-left: 1rem">-->
+  <!--跳转到新页面-->
+  <!--</navigator>-->
+</view>

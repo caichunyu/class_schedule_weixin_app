@@ -1,0 +1,34 @@
+/**app.wxss**/
+@import "./miniprogram_npm/vant-weapp/common/index.wxss";
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  /* padding: 200rpx 0; */
+  box-sizing: border-box;
+}
+
+/*row;*/
+.row {
+  display: flex;
+  flex-direction: row;
+}
+/*column*/
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

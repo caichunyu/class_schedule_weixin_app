@@ -1,0 +1,23 @@
+<!--pages/subscription/subscription.wxml-->
+<view class="column main-box" >
+
+  <view class="row top-box">
+    <view class="row" style="align-items: center;justify-content: space-around; width: 440rpx;">
+      <image src="../../assets/icon/lingdang.png" style="width: 28px;height: 30px"></image>
+      <view class="column">
+        <view>推送提醒</view>
+        <view class="font-style" style="font-size: 12px">开启后可以接受订阅推送数据</view>
+      </view>
+    </view>
+    <van-switch checked="{{ checked }}" bind:change="checkedOnChange"/>
+  </view>
+
+  <image src="../../assets/logo/logo_gray.png" style="width: 740rpx; height: 296rpx; margin-top: -100rpx"></image>
+
+  <view class="column bottom-box">
+    <view >欢迎来到招标订阅</view>
+    <view class="font-style" style="color: #919598; padding: 15rpx">订阅成功后，闪电推送招标信息，提高企业中标率！</view>
+    <button bindtap="toAddSubscription" style="width: 450rpx; background-color: #138bec; color: white;">添加订阅</button>
+  </view>
+
+</view>
