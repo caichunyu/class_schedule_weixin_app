@@ -1,0 +1,2 @@
+# class_schedule_weixin_app
+自用微信课程表小程序
